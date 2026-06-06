@@ -1,0 +1,10 @@
+FROM eclipse-temurin:21-jre
+
+WORKDIR /app
+
+COPY dependencies/ ./
+COPY spring-boot-loader/ ./
+COPY snapshot-dependencies/ ./
+COPY application/ ./
+
+ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
