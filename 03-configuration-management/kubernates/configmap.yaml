@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: spring-boot-config
+
+
+data:
+  APP_NAME: "Spring-Boot-on-Kubernetes"
+  ENVIRONMENT: "development"
