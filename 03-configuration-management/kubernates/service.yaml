@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: spring-boot-config-app
+
+spec:
+
+  selector:
+    app: spring-boot-config-app
+
+  ports:
+
+    - port: 8081
+
+      targetPort: 8081
+
+      nodePort: 30082
+
+  type: NodePort
