@@ -41,6 +41,10 @@ spec:
                 name: spring-boot-config
 
 
+            - configMapRef:
+                name: profile-config
+
+
             - secretRef:
 
                 name: spring-boot-secret
