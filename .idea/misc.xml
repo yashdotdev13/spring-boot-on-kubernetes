@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/01-containerization/spring-boot-app/pom.xml" />
+        <option value="$PROJECT_DIR$/03-configuration-management/spring-boot-app/pom.xml" />
       </list>
     </option>
   </component>

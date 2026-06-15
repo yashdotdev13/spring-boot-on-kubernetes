@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+
+  name: file-config
+
+
+data:
+
+  app-config.properties: |
+
+    custom.message=ConfigMap Mounted As File
+
+    custom.owner=Yash
+
+    custom.version=1.0

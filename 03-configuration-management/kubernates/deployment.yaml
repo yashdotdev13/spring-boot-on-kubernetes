@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: spring-boot-config-app
+
+spec:
+
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: spring-boot-config-app
+
+  template:
+
+    metadata:
+
+      labels:
+        app: spring-boot-config-app
+
+    spec:
+
+      containers:
+
+        - name: spring-boot-config-app
+
+          image: spring-boot-config-app:1.0
+
+          imagePullPolicy: Never
+
+          ports:
+
+            - containerPort: 8081
+
+
+          envFrom:
+
+            - configMapRef:
+
+                name: spring-boot-config
+
+
+            - configMapRef:
+                name: profile-config
+
+
+            - secretRef:
+
+                name: spring-boot-secret
