@@ -1,5 +1,4 @@
 apiVersion: apps/v1
-
 kind: Deployment
 
 metadata:
@@ -7,7 +6,6 @@ metadata:
   namespace: spring-boot-prod
 
 spec:
-
   replicas: 1
 
   selector:
@@ -17,7 +15,6 @@ spec:
   template:
 
     metadata:
-
       labels:
         app: spring-boot-app
 
@@ -34,3 +31,21 @@ spec:
           ports:
 
             - containerPort: 8081
+
+
+          livenessProbe:
+
+            httpGet:
+
+              path: /actuator/health/liveness
+
+              port: 8081
+
+
+            initialDelaySeconds: 30
+
+            periodSeconds: 10
+
+            timeoutSeconds: 5
+
+            failureThreshold: 3
