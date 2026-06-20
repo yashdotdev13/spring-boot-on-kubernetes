@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: spring-boot-app
+  namespace: spring-boot-prod
+
+
+spec:
+
+  selector:
+    app: spring-boot-app
+
+  ports:
+      - port: 8081
+        targetPort: 8081
+
+
+  type: ClusterIP
