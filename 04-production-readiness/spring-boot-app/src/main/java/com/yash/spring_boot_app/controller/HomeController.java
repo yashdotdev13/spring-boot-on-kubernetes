@@ -8,12 +8,12 @@ public class HomeController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello from Spring Boot V1";
+        return "Hello from Spring Boot V2";
     }
 
     @GetMapping("/version")
     public String version() {
-        return "Spring Boot App Version 1.0";
+        return "Spring Boot App Version 2.0";
     }
 
 }
